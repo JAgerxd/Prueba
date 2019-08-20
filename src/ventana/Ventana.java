@@ -65,13 +65,26 @@ public class Ventana extends JFrame {
         panel.add(etiqueta2);
 
     }
-    private void colocarBotones () {
+
+    private void colocarBotones() {
         JButton boton1 = new JButton();
         boton1.setText("Click"); //establecer el texto al boton
-        boton1.setBounds(100,100,100,40); //establecer la posicion del boton y el tamaño
+        boton1.setBounds(100, 100, 100, 40); //establecer la posicion del boton y el tamaño
         boton1.setEnabled(true);//establecemos el encendido del boton
-        //boton1.setMnemonic('a'); //establecemos el boton con el cual ocurre la interaccion alt + boton definido
+        boton1.setMnemonic('a'); //establecemos el boton con el cual ocurre la interaccion alt + boton definido
+        boton1.setFont(new Font("cooper Black", Font.BOLD, 20)); //establecemos la fuente de la letra
+        boton1.setForeground(Color.blue); //Establecer el color de la letra del boton
         panel.add(boton1);
+
+
+        //Boton 2 - boton de imagen
+
+        JButton boton2 = new JButton();
+        boton2.setBounds(100,200,100,40);
+        boton2.setOpaque(true);
+        boton2.setBackground(Color.BLUE); //Establecemos el color de fondo del boton
+        panel.add(boton2);
+
 
 
     }
