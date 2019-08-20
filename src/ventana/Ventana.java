@@ -30,7 +30,10 @@ public class Ventana extends JFrame {
 
         colocarPaneles();
         //colocarEtiqueta();
-        colocarBotones();
+        //colocarBotones();
+        colocarRadioBotones();
+
+
 
     }
 
@@ -82,8 +85,44 @@ public class Ventana extends JFrame {
         JButton boton2 = new JButton();
         boton2.setBounds(100,200,100,40);
         boton2.setOpaque(true);
-        boton2.setBackground(Color.BLUE); //Establecemos el color de fondo del boton
+        ImageIcon clickAqui = new ImageIcon("boton.png");
+        boton2.setIcon(new ImageIcon(clickAqui.getImage().getScaledInstance(boton2.getWidth(),boton2.getHeight(),Image.SCALE_SMOOTH)));
+        //boton2.setBackground(Color.BLUE); //Establecemos el color de fondo del boton
         panel.add(boton2);
+
+        //boton 3 - boton de bordes
+        JButton boton3 = new JButton();
+        boton3.setBounds(100,300,110,50);
+        boton3.setBorder(BorderFactory.createLineBorder(Color.GREEN,4,true));
+        panel.add(boton3);
+
+
+
+
+
+
+    }
+
+    private void colocarRadioBotones(){
+        JRadioButton radioBoton1 = new JRadioButton("Opcion 1", false);
+        radioBoton1.setBounds(50,100,200,50);
+        radioBoton1.setEnabled(true);
+        radioBoton1.setText("Programacion"); //colocar el nombre en e l radioboton
+        radioBoton1.setFont(new Font("cooper black",0,20));
+        panel.add(radioBoton1);
+
+        JRadioButton radioBoton2 = new JRadioButton("Opcion 2", false);
+        radioBoton2.setBounds(50,150,100,50);
+        panel.add(radioBoton2);
+
+        JRadioButton radioBoton3 = new JRadioButton("Opcion 3", false);
+        radioBoton3.setBounds(50,200,100,50);
+        panel.add(radioBoton3);
+
+        ButtonGroup grupoRadioBotones = new ButtonGroup();
+        grupoRadioBotones.add(radioBoton1);
+        grupoRadioBotones.add(radioBoton2);
+        grupoRadioBotones.add(radioBoton3);
 
 
 
